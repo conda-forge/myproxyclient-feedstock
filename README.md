@@ -11,6 +11,18 @@ Summary: MyProxy Client
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/myproxyclient-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/myproxyclient-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/myproxyclient-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/myproxyclient-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/myproxyclient-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/myproxyclient-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/myproxyclient/badges/version.svg)](https://anaconda.org/conda-forge/myproxyclient)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/myproxyclient/badges/downloads.svg)](https://anaconda.org/conda-forge/myproxyclient)
+
 Installing myproxyclient
 ========================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `myproxyclient` available on your 
 ```
 conda search myproxyclient --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/myproxyclient-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/myproxyclient-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/myproxyclient-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/myproxyclient-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/myproxyclient-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/myproxyclient-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/myproxyclient/badges/version.svg)](https://anaconda.org/conda-forge/myproxyclient)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/myproxyclient/badges/downloads.svg)](https://anaconda.org/conda-forge/myproxyclient)
 
 
 Updating myproxyclient-feedstock

@@ -1,7 +1,7 @@
 {% set name = "MyProxyClient" %}
-{% set version = "1.4.4" %}
+{% set version = "2.0.1" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "98e952e8e6cf25cae90cfbc3fd71e510e1aa78eb493a45148a0c32204e78609a" %}
+{% set hash_val = "5f031e9265b2af7f33c2f2a3ef9844fd6c94812a3f796e06f2b0939a3d00ac4b" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,6 @@ source:
 build:
   entry_points:
     - myproxyclient = myproxy.script:main
-  skip: True  # [py3k]
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
