@@ -1,7 +1,7 @@
 {% set name = "MyProxyClient" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "5f031e9265b2af7f33c2f2a3ef9844fd6c94812a3f796e06f2b0939a3d00ac4b" %}
+{% set hash_val = "0a309413dddff370f4bfc4ad30030575a4be0846afd464cf61f8164942c77241" %}
 
 package:
   name: {{ name|lower }}
