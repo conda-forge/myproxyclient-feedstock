@@ -15,7 +15,7 @@ source:
 build:
   entry_points:
     - myproxyclient = myproxy.script:main
-  number: 0
+  number: 1000
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
