@@ -1,5 +1,5 @@
 {% set name = "MyProxyClient" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 {% set hash_type = "sha256" %}
 {% set hash_val = "5f031e9265b2af7f33c2f2a3ef9844fd6c94812a3f796e06f2b0939a3d00ac4b" %}
 
@@ -45,3 +45,4 @@ extra:
   recipe-maintainers:
     - agoodm
     - jarifibrahim
+    - cehbrecht
