@@ -15,14 +15,15 @@ source:
 build:
   entry_points:
     - myproxyclient = myproxy.script:main
+  noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
-
   run:
     - python
     - pyopenssl
@@ -36,9 +37,10 @@ test:
     - myproxyclient --help
 
 about:
-  home: https://github.com/cedadev/MyProxyClient
-  license: BSD 3-clause
-  license_file: myproxy/LICENSE
+  home: "https://github.com/cedadev/MyProxyClient"
+  license: "BSD-3-Clause"
+  license_family: "BSD"
+  license_file: "myproxy/LICENSE"
   summary: 'MyProxy Client'
 
 extra:
