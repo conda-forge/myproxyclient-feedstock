@@ -27,6 +27,8 @@ requirements:
   run:
     - python
     - pyopenssl
+    - setuptools
+    - six
 
 test:
   imports:
