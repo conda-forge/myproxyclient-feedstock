@@ -3,7 +3,7 @@ About myproxyclient
 
 Home: https://github.com/cedadev/MyProxyClient
 
-Package license: BSD 3-clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -14,9 +14,15 @@ Summary: MyProxy Client
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/myproxyclient-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/myproxyclient-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/myproxyclient-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/myproxyclient-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/myproxyclient-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/myproxyclient-feedstock/branch/master)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4039&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/myproxyclient-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -49,6 +55,8 @@ conda search myproxyclient --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -104,3 +112,10 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@agoodm](https://github.com/agoodm/)
+* [@jarifibrahim](https://github.com/jarifibrahim/)
+
