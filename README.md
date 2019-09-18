@@ -7,8 +7,11 @@ Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: MyProxy Client
+Summary: Python client implementation of MyProxy credential management service
 
+This a pure Python implementation of a client to the MyProxy Credential
+Management Server (http://grid.ncsa.uiuc.edu/myproxy/).
+It provides both a Python API and a command line interface.
 
 
 Current build status
