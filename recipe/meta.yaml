@@ -1,31 +1,28 @@
 {% set name = "MyProxyClient" %}
 {% set version = "2.0.1" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "5f031e9265b2af7f33c2f2a3ef9844fd6c94812a3f796e06f2b0939a3d00ac4b" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_val }}
+  sha256: 5f031e9265b2af7f33c2f2a3ef9844fd6c94812a3f796e06f2b0939a3d00ac4b
 
 build:
   entry_points:
     - myproxyclient = myproxy.script:main
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - pyopenssl
+    - setuptools
 
 test:
   imports:
