@@ -1,5 +1,5 @@
 {% set name = "MyProxyClient" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f031e9265b2af7f33c2f2a3ef9844fd6c94812a3f796e06f2b0939a3d00ac4b
+  sha256: 0a309413dddff370f4bfc4ad30030575a4be0846afd464cf61f8164942c77241
 
 build:
   entry_points:
     - myproxyclient = myproxy.script:main
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -36,7 +36,7 @@ about:
   home: https://github.com/cedadev/MyProxyClient
   license: BSD 3-clause
   license_file: myproxy/LICENSE
-  summary: 'MyProxy Client'
+  summary: MyProxy Client
 
 extra:
   recipe-maintainers:
