@@ -12,7 +12,7 @@ source:
 build:
   entry_points:
     - myproxyclient = myproxy.script:main
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
