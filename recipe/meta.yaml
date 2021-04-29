@@ -1,43 +1,62 @@
 {% set name = "MyProxyClient" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
+#wget https://github.com/cedadev/MyProxyClient/archive/refs/tags/2.1.0.tar.gz -nv -O - | openssl sha256
+{% set hash_type = "sha256" %}
+#{% set hash_val = "0a309413dddff370f4bfc4ad30030575a4be0846afd464cf61f8164942c77241" %}
+{% set hash_val = "c3f89d4d6195746c720252a345ca7b4ec995f1b9b400c626683910b39ab80883" %}
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f031e9265b2af7f33c2f2a3ef9844fd6c94812a3f796e06f2b0939a3d00ac4b
+  #url: "https://files.pythonhosted.org/packages/85/c4/172e5516e7e7d7338f6b6026a604f9635ba4bea6e9ed5097354b7722d714/MyProxyClient-2.1.0.tar.gz"
+  #url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  #sha256: 0a309413dddff370f4bfc4ad30030575a4be0846afd464cf61f8164942c77241
+  url: https://github.com/cedadev/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  {{ hash_type }}: {{ hash_val }}
 
 build:
+  noarch: python
+  number: 0
   entry_points:
-    - myproxyclient = myproxy.script:main
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+    - myproxyclient = myproxy.client.script:main
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
 
 requirements:
-  build:
-    - python>=3.6
+  host:
     - pip
-  run:
-    - python>=3.6
     - pyopenssl
+    - python >=3.6
+    - six
+    - setuptools
+  run:
+    - pyopenssl
+    - python >=3.6
+    - six
     - setuptools
 
 test:
   imports:
     - myproxy
-    - myproxy.test
-    - myproxy.utils
+    - myproxy.client
+    - myproxy.client.test
+    - myproxy.client.utils
   commands:
     - myproxyclient --help
 
 about:
-  home: https://github.com/cedadev/MyProxyClient
-  license: BSD 3-clause
-  license_file: myproxy/LICENSE
-  summary: 'MyProxy Client'
-
+  home: "https://github.com/cedadev/MyProxyClient"
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: myproxy/client/LICENSE
+  summary: "Python client implementation of MyProxy credential management service"
+  doc_url: https://github.com/cedadev/MyProxyClient#readme
+  dev_url: https://github.com/cedadev/MyProxyClient
+  description: |
+    This a pure Python implementation of a client to the MyProxy Credential
+    Management Server (http://grid.ncsa.uiuc.edu/myproxy/).
+    It provides both a Python API and a command line interface.
 extra:
   recipe-maintainers:
     - agoodm
