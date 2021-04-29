@@ -34,6 +34,7 @@ requirements:
     - pyopenssl
     - python >=3.6
     - six
+    - setuptools
 
 test:
   imports:
