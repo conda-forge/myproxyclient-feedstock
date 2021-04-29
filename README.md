@@ -13,6 +13,11 @@ Development: https://github.com/cedadev/MyProxyClient
 
 Documentation: https://github.com/cedadev/MyProxyClient#readme
 
+This a pure Python implementation of a client to the MyProxy Credential
+Management Server (http://grid.ncsa.uiuc.edu/myproxy/).
+It provides both a Python API and a command line interface.
+
+
 Current build status
 ====================
 
