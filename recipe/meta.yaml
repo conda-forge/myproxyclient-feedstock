@@ -20,11 +20,11 @@ requirements:
   host:
     - pip
     - pyopenssl
-    - python
+    - python>=3.6
     - six
   run:
     - pyopenssl
-    - python
+    - python>=3.6
     - six
 
 test:
