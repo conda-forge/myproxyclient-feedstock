@@ -17,8 +17,8 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  #noarch: python
-  number: 1
+  noarch: python
+  number: 2
   entry_points:
     - myproxyclient = myproxy.client.script:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
@@ -27,12 +27,12 @@ requirements:
   host:
     - pip
     - pyopenssl
-    - python
+    - python >=3.6
     - six
     - setuptools
   run:
     - pyopenssl
-    - python
+    - python >=3.6
     - six
     - setuptools
 
