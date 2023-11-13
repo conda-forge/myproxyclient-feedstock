@@ -59,6 +59,7 @@ about:
     It provides both a Python API and a command line interface.
 extra:
   recipe-maintainers:
+    - valeriupredoi
     - agoodm
     - jarifibrahim
     - cofinoa
