@@ -33,6 +33,11 @@ requirements:
     - setuptools
 
 test:
+  source_files:
+    - tests
+    - setup.cfg
+  requires:
+    - pytest
   imports:
     - myproxy
     - myproxy.client
