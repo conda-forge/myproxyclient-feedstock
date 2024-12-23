@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7e998f1cf2246abdd1fbeba067f87d00d7a18d3bc138334dd93ae9a5f5ae3e5e
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - myproxyclient = myproxy.client.script:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
@@ -20,7 +20,7 @@ requirements:
   host:
     - pip
     - pyopenssl
-    - python >=3.6
+    - python {{ python_min }}
     - six
     - pytest-runner
     - setuptools_scm
@@ -28,7 +28,7 @@ requirements:
     - pip
     - pyopenssl
     - pytest
-    - python >=3.6
+    - python >={{ python_min }}
     - six
     - setuptools
 
@@ -38,6 +38,7 @@ test:
     - setup.cfg
   requires:
     - pytest
+    - python {{ python_min }}
   imports:
     - myproxy
     - myproxy.client
