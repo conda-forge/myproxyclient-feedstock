@@ -1,17 +1,17 @@
 {% set name = "MyProxyClient" %}
-{% set version = "2.1.1" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e998f1cf2246abdd1fbeba067f87d00d7a18d3bc138334dd93ae9a5f5ae3e5e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | lower }}-{{ version }}.tar.gz
+  sha256: 9e65226f2790fdb9ecc2f7543736b5445cd2dae26b265d951dfe5cb73c8803df
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - myproxyclient = myproxy.client.script:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
