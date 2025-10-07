@@ -23,7 +23,8 @@ requirements:
     - python {{ python_min }}
     - six
     - pytest-runner
-    - setuptools_scm
+    - setuptools >=40.6.0
+    - setuptools_scm >=6.2
   run:
     - pip
     - pyopenssl
